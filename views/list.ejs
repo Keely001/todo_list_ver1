@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="styles/stles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1> <%= kindOfDay %></h1>
+    </div>
+
+    <div>
+        <% for (var i = 0; i < itemsCur.length; i++){ %>
+        <div  class="item">
+            <input type="checkbox">
+            <p><%= itemsCur[i] %></p>
+        </div>
+        <% } %>
+    </div>
+    <form method="post" action="/" class="iten">
+        <input type="text" name="currItem" placeholder="Enter list item">
+        <button type="submit" name="button">+</button>
+    </form>
+</body>
+</html>     
